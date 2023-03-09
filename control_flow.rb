@@ -1,13 +1,11 @@
 def admin_login(username, password)
-  # your code here
-  if username == "admin"
-   return "Access granted"
-  elsif username == "ADMIN"
-   return "Access granted"
+  if username.downcase == "admin" && password == "12345"
+    return "Access granted"
   else
     return "Access denied"
   end
 end
+
 
 def hows_the_weather(temperature)
   # your code here
@@ -46,8 +44,8 @@ def calculator(operation, num1, num2)
     num1 * num2
   when "/"
     num1 / num2
-  else 
-    puts "Invalid operation"
+  else
+    puts "Invalid operation!"
     nil
   end
 end
